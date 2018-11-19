@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#b794f6"
     android:orientation="vertical"
     tools:context="com.example.android.rentcalculator.MainActivity">
@@ -11,9 +11,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#5300e8"
         android:gravity="center_horizontal"
+        android:padding="10dp"
         android:text="@string/name_banner"
-        android:textSize="30sp" />
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--Separator line under name banner-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/black"></View>
 
     <!--Rent Line-->
     <LinearLayout
@@ -27,19 +37,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="@string/rent"
+            android:textColor="@android:color/white"
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/rent_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="500"
+            android:text="0"
             android:textSize="18sp" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:onClick="setRent"
             android:text="@string/change"
             android:textSize="18sp" />
     </LinearLayout>
@@ -54,23 +67,32 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:text="@string/cost_per_unit_text"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:hint="@string/change"
+            android:inputType="numberDecimal"
+            android:onClick="setCostPerUnit"
+            android:padding="8dp"
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/cost_per_unit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1.2"
-            android:textSize="18sp" />
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/change"
-            android:textSize="18sp" />
     </LinearLayout>
 
     <!--Meter Reading Line-->
@@ -85,13 +107,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="@string/meter_units"
+            android:textColor="@android:color/white"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1.2"
+            android:text="0"
             android:textSize="18sp" />
 
         <Button
@@ -108,12 +131,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
         android:background="#75E900"
         android:text="@string/calculate_electricity"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
 
+    <!--Total Price view-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center_horizontal"
+            android:paddingTop="32dp"
+            android:text="€900.89"
+            android:textColor="@android:color/white"
+            android:textSize="99sp" />
+    </LinearLayout>
 
 </LinearLayout>
