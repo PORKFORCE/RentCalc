@@ -1,57 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.rentcalculator.MainActivity"
-    android:paddingTop="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:layout_height="wrap_content"
+    android:background="#b794f6"
+    android:orientation="vertical"
+    tools:context="com.example.android.rentcalculator.MainActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/meter_reading"
-        android:hint="@string/meter_reading_text"
-        android:textSize="18sp"/>
-
+    <!--Name banner-->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/meter_units"
-        android:textAllCaps="true"
-        android:textSize="18sp"
-        android:text="@string/meter_units"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_toRightOf="@+id/meter_reading"
-        android:layout_alignBaseline="@id/meter_reading"/>
+        android:gravity="center_horizontal"
+        android:text="@string/name_banner"
+        android:textSize="30sp" />
 
-    <EditText
-        android:layout_width="wrap_content"
+    <!--Rent Line-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/meter_reading"
-        android:id="@+id/cost_per_unit"
-        android:hint="@string/cost_per_unit_text" />
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/euro_per_unit"
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/rent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="500"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/change"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--Unit Cost Line-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/cost_per_unit"
-        android:layout_alignRight="@id/meter_units"
-        android:layout_marginLeft="53dp"
-        android:layout_toRightOf="@+id/cost_per_unit"
-        android:text="@string/euro_per_unit_text"
-        android:textAllCaps="true"
-        android:textSize="18sp" />
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/cost_per_unit_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1.2"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/change"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--Meter Reading Line-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/meter_units"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1.2"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/change"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--Calculate total rent button-->
     <Button
         android:id="@+id/calculate_electricity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cost_per_unit"
-        android:text="@string/calculate_electricity" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#75E900"
+        android:text="@string/calculate_electricity"
+        android:textColor="@android:color/black" />
 
 
-
-</RelativeLayout>
+</LinearLayout>

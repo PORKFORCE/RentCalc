@@ -9,20 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private double meterUnits;
-    private double unitCost;
 
-    //First line
-    private EditText mMeterReadingText;
-    private TextView mMeterReadingResult;
-
-    //Second line
-    private EditText mCostPerUnitText;
-    private TextView mCostPerUnitResult;
-
-    private Button bCalculateElectric;
-
-    String unitsString;
 
 
 
@@ -30,19 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mMeterReadingText = (EditText) findViewById(R.id.meter_reading);
-        mMeterReadingResult = (TextView) findViewById(R.id.meter_units);
-
-        mCostPerUnitText = (EditText) findViewById(R.id.cost_per_unit);
-        mCostPerUnitResult = (TextView) findViewById(R.id.euro_per_unit);
-
-        bCalculateElectric = (Button) findViewById(R.id.calculate_electricity);
-
-        unitsString = mMeterReadingText.toString();
-        //meterUnits = Double.valueOf(unitsString);
-        //mMeterReadingResult.setText(unitsString);
-
 
     }
 
