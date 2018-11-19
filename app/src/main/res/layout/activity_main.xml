@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.rentcalculator.MainActivity"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/meter_reading"
+        android:hint="@string/meter_reading_text"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/meter_units"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:text="@string/meter_units"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@+id/meter_reading"
+        android:layout_alignBaseline="@id/meter_reading"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/meter_reading"
+        android:id="@+id/cost_per_unit"
+        android:hint="@string/cost_per_unit_text" />
+
+    <TextView
+        android:id="@+id/euro_per_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cost_per_unit"
+        android:layout_alignRight="@id/meter_units"
+        android:layout_marginLeft="53dp"
+        android:layout_toRightOf="@+id/cost_per_unit"
+        android:text="@string/euro_per_unit_text"
+        android:textAllCaps="true"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/calculate_electricity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cost_per_unit"
+        android:text="@string/calculate_electricity" />
+
+
+
+</RelativeLayout>

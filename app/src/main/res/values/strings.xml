@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RentCalculator</string>
+    <string name="meter_reading_text">Enter meter reading</string>
+    <string name="meter_units">units</string>
+    <string name="cost_per_unit_text">Enter unit cost</string>
+    <string name="euro_per_unit_text">euros</string>
+    <string name="calculate_electricity">Calculate</string>
+</resources>
