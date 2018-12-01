@@ -4,6 +4,6 @@
     <string name="rent">Rent</string>
     <string name="change">change</string>
     <string name="cost_per_unit_text">Cost per unit</string>
-    <string name="meter_units">Meter reading</string>
+    <string name="meter_units">Meter</string>
     <string name="calculate_electricity">Calculate</string>
 </resources>
